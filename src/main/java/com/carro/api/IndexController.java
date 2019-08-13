@@ -2,6 +2,7 @@ package com.carro.api;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,16 +20,12 @@ public class IndexController {
 		return "olá spring boot";
 	}
 	
-	@GetMapping("/login")
-	public String login(@RequestParam("login")String login,@RequestParam("senha")String senha) {
+	@GetMapping("/login/{login}/senha/{senha}")
+	public String login(@PathVariable("login")String login,@PathVariable("senha")String senha) {
 		return"login :"+login+" senha: "+senha;
-		//url completa = http://localhost:8080/login?login=felipe&senha=123 
+		//http://localhost:8080/login/felipe/senha/1234
 		
-		//http://localhost:8080/login // /login mapeado
-		//? indica que vai ser passado valores via get
-		//login=felipe popula felipe no parametro login
-		//& indica que vou passar outro parametro
-		//senha=123 popula o valor da senha
+		//{} indica que vai ser passado um valor via path
 	}
 	
 }
