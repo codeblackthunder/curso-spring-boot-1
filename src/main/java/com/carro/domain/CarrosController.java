@@ -19,7 +19,7 @@ public class CarrosController {
 CarroService service;
 	
 	@GetMapping 
-	public List<Carro> getCarros() {
+	public Iterable<Carro> getCarros() {
 		return service.getCarros();
 	}
 	
