@@ -20,12 +20,21 @@ public class IndexController {
 		return "olá spring boot";
 	}
 	
-	@GetMapping("/login/{login}/senha/{senha}")
-	public String login(@PathVariable("login")String login,@PathVariable("senha")String senha) {
+	@PostMapping("/login")
+	public String login(@RequestParam("login")String login,@RequestParam("senha")String senha) {
 		return"login :"+login+" senha: "+senha;
-		//http://localhost:8080/login/felipe/senha/1234
+
+		//testar via postman
+		/*
+		 *  1 - Marcar do tipo post
+		 *  2 - body
+		 *  3 - x-www-form.....
+		 *  4 - settar os campos
+		 *  5 - send
+		 *  
+		 *  
+		 *  */
 		
-		//{} indica que vai ser passado um valor via path
 	}
 	
 }
