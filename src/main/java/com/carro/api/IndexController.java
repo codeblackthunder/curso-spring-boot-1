@@ -1,6 +1,9 @@
 package com.carro.api;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,14 +11,26 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/") // indica o que deve digitar na url para acessar esse web server
 public class IndexController {
 
+	//browser sempre cai no get
+	
 	@GetMapping //pega o mapeamento da /
-	public String ola() {
+	public String get() {
 		return "olá spring boot";
 	}
 	
-	@GetMapping("/tiau") //para não ter um mesmo web server com o mesmo mapeamento é necessario indicar nova rota
-	public String tiau() {
-		return "tiau spring boot";
+	@PostMapping //pega o mapeamento da /
+	public String post() {
+		return "olá spring boot";
+	}
+	
+	@PutMapping //pega o mapeamento da /
+	public String put() {
+		return "olá spring boot";
+	}
+	
+	@DeleteMapping //pega o mapeamento da /
+	public String delete() {
+		return "olá spring boot";
 	}
 	
 }
