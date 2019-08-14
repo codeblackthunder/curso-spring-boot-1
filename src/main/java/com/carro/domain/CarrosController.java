@@ -1,6 +1,7 @@
 package com.carro.domain;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,7 +24,10 @@ CarroService service;
 		return service.getCarros();
 	}
 	
-
+	@GetMapping("/{id}") 
+	public Optional<Carro> getCarrosById(@PathVariable("id")Long id) {
+		return service.getCarroById(id);
+	}
 		
 	}
 	
