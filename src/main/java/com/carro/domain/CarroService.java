@@ -34,6 +34,14 @@ public class CarroService {
 		// TODO Auto-generated method stub
 		return rep.findByTipo(tipo);
 	}
+
+
+
+
+	public Carro save(Carro carro) {
+		return rep.save(carro);
+		
+	}
 	
 	
 	
