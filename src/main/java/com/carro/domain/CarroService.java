@@ -26,6 +26,15 @@ public class CarroService {
 		// TODO Auto-generated method stub
 		return rep.findById(id);
 	}
+
+
+
+
+	public Iterable<Carro> getCarroByTipo(String tipo) {
+		// TODO Auto-generated method stub
+		return rep.findByTipo(tipo);
+	}
+	
 	
 	
 }

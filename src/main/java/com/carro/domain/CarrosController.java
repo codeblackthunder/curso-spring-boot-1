@@ -27,8 +27,13 @@ CarroService service;
 	@GetMapping("/{id}") 
 	public Optional<Carro> getCarrosById(@PathVariable("id")Long id) {
 		return service.getCarroById(id);
+		//http://localhost:8080/api/v1/carros/1 segui o mapeamento da rota os metodos so acrescentam
 	}
-		
+	@GetMapping("/tipo/{tipo}") 
+	public Iterable<Carro> getCarrosById(@PathVariable("tipo")String tipo) {
+		return service.getCarroByTipo(tipo);
+		//http://localhost:8080/api/v1/carros/1 segui o mapeamento da rota os metodos so acrescentam
+	}
 	}
 	
 
